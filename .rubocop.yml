@@ -1,0 +1,28 @@
+---
+AllCops:
+  TargetRubyVersion: 2.5
+  
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - spec/**/*
+    - Rakefile
+
+Layout/MultilineMethodCallIndentation:
+  Enable: true
+  EnforcedStyle: indented
+
+Security/YAMLLoad:
+  Enabled: true
+  Exclude:
+    - spec/**/*
+
+Style/HashSyntax:
+  Enabled: true
+  Exclude:
+    - Rakefile
+
+Style/SymbolArray:
+  Enabled: true
+  Exclude:
+    - Rakefile
