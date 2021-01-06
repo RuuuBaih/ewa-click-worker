@@ -27,6 +27,10 @@ module Ewa
         @queue.send_message(message_body: message)
       end
 
+      ## Subscribe queue, polling a batch of message
+      #def subscribe
+      #end
+
       ## Polls queue, yielding each messge
       # Usage:
       #   q = Messaging::Queue.new(Api.config.CLICK_QUEUE_URL)

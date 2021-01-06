@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'sequel'
+Sequel.extension :migration
 
 Sequel.migration do
   change do
