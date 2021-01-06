@@ -30,7 +30,7 @@ namespace :docker do
     puts "\nRUNNING WORKER WITH LOCAL CONTEXT"
     puts " Running in #{env} mode"
 
-    sh 'docker run -e WORKER_ENV -v $(pwd)/config:/worker/config --rm -it ' \
+    sh 'docker run -e WORKER_ENV -v $(pwd)/config:/worker/config -v $(pwd)/worker/database/local:/worker/database/local --rm -it ' \
        "#{USERNAME}/#{IMAGE}:#{VERSION}"
   end
 

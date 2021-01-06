@@ -7,6 +7,7 @@ ruby '2.7.2'
 # Web Application
 gem 'econfig', '~> 2.1'
 gem 'roda', '~> 3.8'
+gem 'pry', '~> 0.11.3'
 
 # Messaging
 gem 'aws-sdk-sqs'
@@ -18,6 +19,13 @@ gem 'dry-struct', '~> 1.3'
 gem 'dry-types', '~> 1.4'
 
 # INFRASTRUCTURE LAYER
+# INFRASTRUCTURE LAYER
+# Networking
+gem 'http', '~> 4.0'
+
+# Asynchronicity
+gem 'concurrent-ruby', '~> 1.1'
+
 # Database
 gem 'hirb', '~> 0.7'
 gem 'hirb-unicode'
