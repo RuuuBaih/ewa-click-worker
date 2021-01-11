@@ -34,17 +34,5 @@ module Ewa
         DB
       end
     end
-=begin
-    if Econfig.env == "development"
-      ENV['DATABASE_URL'] = "sqlite://#{config.DB_FILENAME}"
-    end
-    
-
-    def self.DB # rubocop:disable Naming/MethodName
-      db = Sequel.connect(ENV['DATABASE_URL']) # rubocop:disable Lint/ConstantDefinitionInBlock
-      db
-    end
-=end
-
   end
 end
