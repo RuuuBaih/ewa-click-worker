@@ -39,7 +39,6 @@ module Ewa
     class Request
       def initialize(url)
         @url = url
-        puts @url
       end
 
       def get

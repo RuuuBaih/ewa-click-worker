@@ -44,7 +44,6 @@ module Ewa
     def do_db_update(rest_id)
       # get rest entity
       rest_entity = Repository::RestaurantDetails.find_by_rest_id(rest_id)
-      puts rest_entity.inspect
       # get rebuilt repo entity
       # here will auto update click數量
       # update(entity, first_time_or_not)
@@ -56,7 +55,6 @@ module Ewa
       cov_pic_repo_entities = Repository::CoverPictures.db_update(new_cover_pic_entities, rest_detail_entity.id)
       # update restaurant
       repo_entity = Repository::RestaurantDetails.update(rest_detail_entity, false)
-      puts repo_entity.inspect
     end
 
     def update_restaurants
@@ -65,8 +63,6 @@ module Ewa
       # default hash value is 0
       @updated_restaurants = Hash.new(0)
       @queue.poll do |queue|
-        puts queue.inspect
-        puts queue.class
         # count how many times restaurants get clicks
         rest_id = queue
         @updated_restaurants[rest_id] = @updated_restaurants[rest_id] + 1
